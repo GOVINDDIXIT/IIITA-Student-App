@@ -32,9 +32,9 @@
                 android:id="@+id/tMon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
                 android:layout_gravity="center"
-
+                android:layout_marginTop="18dp"
+                android:fontFamily="@font/roboto"
                 android:text="Thursday"
                 android:textSize="35dp"
                 android:textStyle="bold"
@@ -54,6 +54,7 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="-204dp"
                 android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto"
                 android:text="9:00 - 10:00"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -64,9 +65,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="204dp"
                 android:layout_gravity="center"
-
+                android:layout_marginTop="204dp"
+                android:fontFamily="@font/roboto"
                 android:text="SMAT330C"
                 android:textSize="20dp" />
 
@@ -76,10 +77,10 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/textView5"
                 android:layout_centerHorizontal="true"
-                android:layout_marginBottom="-280dp"
-                android:text="10:00 - 11:00"
                 android:layout_gravity="center"
-
+                android:layout_marginBottom="-280dp"
+                android:fontFamily="@font/roboto"
+                android:text="10:00 - 11:00"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
@@ -90,48 +91,46 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center"
-
                 android:layout_marginTop="280dp"
+                android:fontFamily="@font/roboto"
                 android:text="EMIP332C"
                 android:textSize="20dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="11:15 - 1:15"
-                android:layout_gravity="center"
                 android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
                 android:text="IOOM332C"
-                android:layout_gravity="center"
-                android:textSize="20dp"
-                />
+                android:textSize="20dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto"
                 android:text="3:00 - 6:00"
-                android:layout_gravity="center"
                 android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="20dp"
+                android:fontFamily="@font/roboto"
                 android:text="LAB: IOOM332C"
-                />
-
-
-
-
+                android:textSize="20dp" />
 
 
         </LinearLayout>
-
 
 
     </LinearLayout>

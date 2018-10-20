@@ -77,7 +77,7 @@ public class TimeTable extends AppCompatActivity {
             private void onChangeTab(int position) {
                 if(position==0)
                 {
-                    Mon.setTextSize(25);
+                    Mon.setTextSize(28);
                     Mon.getResources().getColor(R.color.bright);
                     Tue.setTextSize(20);
                     Tue.getResources().getColor(R.color.light_color);
@@ -92,7 +92,7 @@ public class TimeTable extends AppCompatActivity {
                 {
                     Mon.setTextSize(20);
                     Mon.getResources().getColor(R.color.light_color);
-                    Tue.setTextSize(25);
+                    Tue.setTextSize(28);
                     Tue.getResources().getColor(R.color.bright);
                     Wed.setTextSize(20);
                     Wed.getResources().getColor(R.color.light_color);
@@ -107,7 +107,7 @@ public class TimeTable extends AppCompatActivity {
                     Mon.getResources().getColor(R.color.light_color);
                     Tue.setTextSize(20);
                     Tue.getResources().getColor(R.color.light_color);
-                    Wed.setTextSize(25);
+                    Wed.setTextSize(28);
                     Wed.getResources().getColor(R.color.bright);
                     Thu.setTextSize(20);
                     Thu.getResources().getColor(R.color.light_color);
@@ -122,7 +122,7 @@ public class TimeTable extends AppCompatActivity {
                     Tue.getResources().getColor(R.color.light_color);
                     Wed.setTextSize(20);
                     Wed.getResources().getColor(R.color.light_color);
-                    Thu.setTextSize(25);
+                    Thu.setTextSize(28);
                     Thu.getResources().getColor(R.color.bright);
                     Fri.setTextSize(20);
                     Fri.getResources().getColor(R.color.light_color);
@@ -137,7 +137,7 @@ public class TimeTable extends AppCompatActivity {
                     Wed.getResources().getColor(R.color.light_color);
                     Thu.setTextSize(20);
                     Thu.getResources().getColor(R.color.light_color);
-                    Fri.setTextSize(25);
+                    Fri.setTextSize(28);
                     Fri.getResources().getColor(R.color.bright);
                 }
             }

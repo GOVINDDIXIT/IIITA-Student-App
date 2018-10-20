@@ -34,6 +34,11 @@
             android:title="Albums">
 
         </item>
+        <item
+            android:id="@+id/nav_extras"
+            android:title="Extras">
+
+        </item>
 
     </group>
 
