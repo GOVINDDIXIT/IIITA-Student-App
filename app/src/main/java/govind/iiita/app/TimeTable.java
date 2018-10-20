@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import govind.iiita.app.Adapter.PagerViewAdapter;
+
 public class TimeTable extends AppCompatActivity {
     ViewPager viewPager;
     TextView Mon,Tue,Wed,Thu,Fri;

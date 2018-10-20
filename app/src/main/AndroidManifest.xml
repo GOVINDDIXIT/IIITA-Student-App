@@ -26,6 +26,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".DetailActivity" />
 
+        <service android:name=".MessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -42,10 +43,19 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
- 
-        <activity android:name=".Login" />
-        <activity android:name=".LogOut" />
-       </activity>
+        <activity android:name=".AboutPage" />
+        <activity android:name=".Labels.Gymkhana" />
+        <activity android:name=".Labels.Library" />
+        <activity android:name=".Labels.Geekhaven" />
+        <activity android:name=".Labels.React" />
+        <activity android:name=".SignIn.Login" />
+        <activity android:name=".SignIn.LogOut" />
+        <activity android:name=".Labels.Album" />
+        <activity android:name=".Labels.Registration_IIITA" />
+        <activity android:name=".TimeTable" />
+        <activity android:name=".Faculty" />
+
+        <activity android:name=".ECEdept"></activity>
     </application>
 
 </manifest>

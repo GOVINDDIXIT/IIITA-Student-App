@@ -27,8 +27,6 @@ public class DetailActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         webview.setVisibility(View.INVISIBLE);
         webview.getSettings().setJavaScriptEnabled(true);
-        //webview.getSettings().setBuiltInZoomControls(true);
-       // webview.getSettings().setUseWideViewPort(true);
         webview.setWebChromeClient(new WebChromeClient());
         webview.setWebViewClient(new WebViewClient() {
             @Override
@@ -42,7 +40,6 @@ public class DetailActivity extends AppCompatActivity {
                 super.onPageFinished(view, url);
                 progressBar.setVisibility(View.GONE);
                 webview.setVisibility(View.VISIBLE);
-                //Toast.makeText(DetailActivity.this,"Page loaded",Toast.LENGTH_SHORT).show();
                 String javaScript = "javascript:(function() { var a= document.getElementsByTagName('header');a[0].hidden='true';a=document.getElementsByClassName('page_body');a[0].style.padding='0px';})()";
                 webview.loadUrl(javaScript);
             }

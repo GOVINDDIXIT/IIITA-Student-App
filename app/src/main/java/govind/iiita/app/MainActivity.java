@@ -16,12 +16,14 @@ import android.webkit.WebView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import govind.iiita.app.Adapter.PostAdapter;
 import govind.iiita.app.Labels.Album;
 import govind.iiita.app.Labels.Gymkhana;
 import govind.iiita.app.Labels.Library;
-import govind.iiita.app.Labels.Geekhaven;
 
 import govind.iiita.app.Labels.Registration_IIITA;
+import govind.iiita.app.Models.PostList;
+import govind.iiita.app.SignIn.LogOut;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -44,12 +46,6 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView=findViewById(R.id.postList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        /* Custom Font
-        Typeface myTypeFace = Typeface.createFromAsset(getAssets(), "fonts/slabo.ttf");
-        textView = (TextView) findViewById(R.id.postTitle);
-        textView.setTypeface(myTypeFace);*/
-
         setUpToolbar();
 
 
@@ -60,16 +56,15 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.nav_home:
                         Toast.makeText(MainActivity.this,"Clicked Home",Toast.LENGTH_SHORT).show();
+                        break;
                     case R.id.nav_TimeTable:
-                        startActivity(new Intent(MainActivity.this, Gymkhana.class));
+                        startActivity(new Intent(MainActivity.this, TimeTable.class));
                         break;
                     case R.id.nav_library:
                         startActivity(new Intent(MainActivity.this, Library.class));
                         break;
-                    case R.id.nav_cultural_societies:
-                        Toast.makeText(MainActivity.this,"No article on flutter ",Toast.LENGTH_SHORT).show();
                     case R.id.nav_geekhaven:
-                        startActivity(new Intent(MainActivity.this, Geekhaven.class));
+                        openWebPage(getResources().getString(R.string.Geekhaven_Website));
                         break;
                     case R.id.nav_gymkhana:
                         startActivity(new Intent(MainActivity.this, Gymkhana.class));
@@ -81,7 +76,8 @@ public class MainActivity extends AppCompatActivity {
                         sendArticle();
                         break;
                     case R.id.registration_iiita:
-                        startActivity(new Intent(MainActivity.this, Registration_IIITA.class)) ;
+                        startActivity(new Intent(MainActivity.this, Registration_IIITA.class));
+                        break;
                     case R.id.nav_albums:
                         startActivity(new Intent(MainActivity.this, Album.class));
                         break;
@@ -89,8 +85,6 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, AboutPage.class));
                         break;
                     }
-
-
                 }
                 return false;
             }
@@ -99,6 +93,12 @@ public class MainActivity extends AppCompatActivity {
 
         getData();
 
+    }
+
+    private void openWebPage(String url) {
+        Toast.makeText(MainActivity.this, "Wait a while....", Toast.LENGTH_SHORT).show();
+        Intent implicit = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        startActivity(implicit);
     }
 
     private void sendArticle() {

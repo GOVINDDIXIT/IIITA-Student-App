@@ -10,7 +10,7 @@ import govind.iiita.app.R;
 public class Registration_IIITA extends AppCompatActivity {
 
     WebView myWebView;
-    String URL ="https://apply.iiita.ac.in/unified_login/";
+    String URL ="www.google.com";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

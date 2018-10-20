@@ -1,5 +1,6 @@
 package govind.iiita.app;
 
+import govind.iiita.app.Models.PostList;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".About">
+    >
 
     <android.support.v7.widget.CardView xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -112,7 +112,7 @@
                     android:layout_marginStart="32dp"
                     android:paddingBottom="8dp"
                     android:paddingTop="8dp"
-                    android:text="Star DOGMA On Github"
+                    android:text="Star IIITA APP On Github"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
 
             </LinearLayout>
