@@ -4,11 +4,6 @@
         android:id="@+id/group1"
         android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
-            android:title="Home">
-
-        </item>
-        <item
             android:id="@+id/nav_TimeTable"
             android:title="Class Time Table">
 

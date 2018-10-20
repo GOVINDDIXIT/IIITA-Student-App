@@ -1,5 +1,5 @@
 
-package govind.iiita.app;
+package govind.iiita.app.Models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

@@ -53,9 +53,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected( MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.nav_home:
-                        Toast.makeText(MainActivity.this,"Clicked Home",Toast.LENGTH_SHORT).show();
-                        break;
                     case R.id.nav_TimeTable:
                         startActivity(new Intent(MainActivity.this, TimeTable.class));
                         break;
