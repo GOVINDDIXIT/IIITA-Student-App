@@ -75,7 +75,8 @@ public class MainActivity extends AppCompatActivity {
                         sendArticle();
                         break;
                     case R.id.nav_extras:
-                        startActivity(new Intent(MainActivity.this, Extras.class));
+                        startActivity(new Intent(MainActivity.this, Extra.class));
+                        break;
                     case R.id.nav_albums:
                         startActivity(new Intent(MainActivity.this, Album.class));
                         break;

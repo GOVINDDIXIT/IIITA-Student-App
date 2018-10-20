@@ -54,8 +54,11 @@
         <activity android:name=".Labels.Registration_IIITA" />
         <activity android:name=".TimeTable" />
         <activity android:name=".Faculty" />
-
-        <activity android:name=".ECEdept"></activity>
+        <activity android:name=".ECEdept" />
+        <activity android:name=".Extra" />
+        <activity android:name=".Ece" />
+        <activity android:name=".It" />
+        <activity android:name=".Guide"></activity>
     </application>
 
 </manifest>
