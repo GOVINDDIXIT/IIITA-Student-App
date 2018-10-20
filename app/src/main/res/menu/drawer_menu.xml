@@ -14,11 +14,6 @@
 
         </item>
         <item
-            android:id="@+id/nav_faculty"
-            android:title="Faculties">
-
-        </item>
-        <item
             android:id="@+id/nav_library"
             android:title="Library">
 
@@ -39,11 +34,7 @@
             android:title="Albums">
 
         </item>
-        <item
-            android:id="@+id/registration_iiita"
-            android:title="Registration IIITA">
 
-        </item>
     </group>
 
     <group

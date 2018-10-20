@@ -21,7 +21,6 @@ import govind.iiita.app.Labels.Album;
 import govind.iiita.app.Labels.Gymkhana;
 import govind.iiita.app.Labels.Library;
 
-import govind.iiita.app.Labels.Registration_IIITA;
 import govind.iiita.app.Models.PostList;
 import govind.iiita.app.SignIn.LogOut;
 import retrofit2.Call;
@@ -74,9 +73,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.Submit_article:
                         sendArticle();
-                        break;
-                    case R.id.registration_iiita:
-                        startActivity(new Intent(MainActivity.this, Registration_IIITA.class));
                         break;
                     case R.id.nav_albums:
                         startActivity(new Intent(MainActivity.this, Album.class));
