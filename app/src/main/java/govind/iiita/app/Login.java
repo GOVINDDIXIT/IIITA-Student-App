@@ -1,4 +1,4 @@
-package govind.iiita.app;
+package govind.iiita.app.SignIn;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-import com.firebase.ui.auth.AuthUI;
+
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -20,8 +20,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+
 import govind.iiita.app.MainActivity;
 import govind.iiita.app.R;
 
@@ -31,13 +31,24 @@ public class Login extends AppCompatActivity {
     private static final int RC_SIGN_IN = 1;
     private GoogleApiClient mGoogleApiClient;
     private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
     private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if (firebaseAuth.getCurrentUser() != null) {
+                    startActivity(new Intent(Login.this,MainActivity.class));
+
+                }
+            }
+        };
         mGoogleBtn = findViewById(R.id.sign_in_button);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -62,6 +73,12 @@ public class Login extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
     }
 
 
@@ -98,26 +115,13 @@ public class Login extends AppCompatActivity {
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithCredential", task.getException());
                             Toast.makeText(Login.this, "Authentication failed", Toast.LENGTH_LONG).show();
-                        } else {
-                            FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-                            if (currentFirebaseUser.getEmail().endsWith("@iiita.ac.in") || currentFirebaseUser.getEmail().endsWith("@iiitl.ac.in")) {
-                                Intent intent = new Intent(Login.this, MainActivity.class);
-                                startActivity(intent);
-                                finish();
-                            } else {
-                                logOut();
-                                Toast.makeText(getApplicationContext(),"Please Login with College Mail ID",Toast.LENGTH_SHORT).show();
-                            }
                         }
+
+                        // ...
                     }
                 });
+
     }
 
-    private void logOut() {
-        AuthUI.getInstance().signOut(getApplicationContext()).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-            }
-        });
-    }
+
 }
