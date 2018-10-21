@@ -42,7 +42,7 @@
                 android:layout_marginTop="40dp"
 
                 android:layout_alignStart="@+id/faculty_name"
-                android:text="Twin Support Vector Machine, Support Vector Machine, Stream Compu " />
+                android:text="Twin Support Vector Machine, Support Vector Machine, Stream Computer " />
 
         </RelativeLayout>
 
