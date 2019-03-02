@@ -2,7 +2,7 @@
 A complete APP for every IIITA Students created in [Prototype](https://prototypeiiita.github.io/).
 
 The main feature include displaying all the events happening in the campus i.e workshops, marathon ,fun events etc.
-The app is supported by a blog http://iiitablog.blogspot.com/
+The app is supported by a [blog](http://iiitablog.blogspot.com/)
 The other features include showing timetable for current user, access to library. Also we can directly access all major websites of the college.
 A user can also share his experience to the all app user by submitting it and after getting approved by admin.
 
