@@ -1,5 +1,5 @@
 # IIITA APP
-A complete APP for every IIITA Students created in [Prototype](https://prototypeiiita.github.io/).
+A complete APP for every IIITA Students created in Prototype Hackathon
 
 The main feature include displaying all the events happening in the campus i.e workshops, marathon ,fun events etc.
 The app is supported by a [blog](http://iiitablog.blogspot.com/)
